@@ -356,8 +356,7 @@ Resources:
         Ref: ExampleC9InstanceType
       Name:
         Ref: AWS::StackName
-      # OwnerArn: !If [Create3rdPartyResources, !Ref ExampleOwnerArn, !Ref "AWS::NoValue" ]
-      OwnerArn: "arn:aws:sts::265664683898:assumed-role/AWSReservedSSO_AWSAdministratorAccess_574b6756fcc31821/jinwoong"
+      OwnerArn: !If [Create3rdPartyResources, !Ref ExampleOwnerArn, !Ref "AWS::NoValue" ]
       Tags: 
         - 
           Key: SSMBootstrap
